@@ -1,0 +1,32 @@
+1.3.6.1.5.5.7.3.1: id-kp-serverAuth
+1.3.6.1.5.5.7.3.2: id-kp-clientAuth
+1.3.6.1.5.5.7.3.3: id-kp-codeSigning
+1.3.6.1.5.5.7.3.4: id-kp-emailProtection
+1.3.6.1.5.5.7.3.5: id-kp-ipsecEndSystem
+1.3.6.1.5.5.7.3.6: id-kp-ipsecTunnel
+1.3.6.1.5.5.7.3.7: id-kp-ipsecUser
+1.3.6.1.5.5.7.3.8: id-kp-timeStamping
+1.3.6.1.5.5.7.3.9: id-kp-OCSPSigning
+1.3.6.1.5.5.7.3.10: id-kp-dvcs
+1.3.6.1.5.5.7.3.11: id-kp-sbgpCertAAServerAuth
+1.3.6.1.5.5.7.3.12: id-kp-scvp-responder
+1.3.6.1.5.5.7.3.13: id-kp-eapOverPPP
+1.3.6.1.5.5.7.3.14: id-kp-eapOverLAN
+1.3.6.1.5.5.7.3.15: id-kp-scvpServer
+1.3.6.1.5.5.7.3.16: id-kp-scvpClient
+1.3.6.1.5.5.7.3.17: id-kp-ipsecIKE
+1.3.6.1.5.5.7.3.18: id-kp-capwapAC
+1.3.6.1.5.5.7.3.19: id-kp-capwapWTP
+1.3.6.1.5.5.7.3.20: id-kp-SIPDomain
+1.3.6.1.5.5.7.3.21: id-kp-secureShellClient
+1.3.6.1.5.5.7.3.22: id-kp-secureShellServer
+1.3.6.1.5.5.7.3.23: id-kp-sendRouter
+1.3.6.1.5.5.7.3.24: id-kp-sendProxy
+1.3.6.1.5.5.7.3.25: id-kp-sendOwner
+1.3.6.1.5.5.7.3.26: id-kp-sendProxiedOwner
+1.3.6.1.5.5.7.3.27: id-kp-cmcCA
+1.3.6.1.5.5.7.3.28: id-kp-cmcRA
+1.3.6.1.5.5.7.3.29: id-kp-cmcArchive
+2.5.29.37.0: anyExtendedKeyUsage
+1.3.6.1.5.2.2: id-pkinit-san  # Kerberos principalname
+1.3.6.1.4.1.311.20.2.3: upn  # Universal Principal Name
