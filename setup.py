@@ -22,6 +22,7 @@ setuptools.setup(
     entry_points={
         "console_scripts": [
             "certreader2yaml = certreader.cli:to_yaml",
+            "certreader2json = certreader.cli:to_json",
         ],
     },
     include_package_data=True,
