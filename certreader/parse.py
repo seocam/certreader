@@ -7,6 +7,10 @@ from pyasn1.type import char, namedtype, tag, univ
 from .oid import get_nameform
 
 
+def hexlify(binary):
+    return ":".join([bytes([byte]).hex() for byte in binary]).upper()
+
+
 class _PrincipalName(univ.Sequence):
     componentType = namedtype.NamedTypes(
         namedtype.NamedType(
@@ -132,7 +136,7 @@ class Certificate:
 
     def _get_signature_algorithm(self):
         algorithm = self._x509_cert.signature_algorithm_oid._name
-        signature = self._x509_cert.signature.hex(":")
+        signature = hexlify(self._x509_cert.signature)
         return {"algorithm": algorithm, "signature": signature}
 
     def _get_subject_from_x509(self):
@@ -202,10 +206,10 @@ class Certificate:
         }
 
     def _get_extension_authorityKeyIdentifier(self, ext):
-        return ext.value.key_identifier.hex(":").upper()
+        return hexlify(ext.value.key_identifier)
 
     def _get_extension_subjectKeyIdentifier(self, ext):
-        return ext.value.digest.hex(":").upper()
+        return hexlify(ext.value.digest)
 
     def _get_extension_keyUsage(self, ext):
         return [ku.lstrip("_") for ku, active in vars(ext.value).items() if active]
