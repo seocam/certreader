@@ -1,14 +1,10 @@
-import sys
-
-import yaml
-
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 
 from pyasn1.codec.der import decoder
 from pyasn1.type import char, namedtype, tag, univ
 
-from oid import get_nameform
+from .oid import get_nameform
 
 
 class _PrincipalName(univ.Sequence):
@@ -239,8 +235,3 @@ class Certificate:
             values.append(san_attrs)
 
         return values
-
-
-if __name__ == "__main__":
-    certificate = Certificate(sys.argv[1])
-    print(yaml.dump(certificate._decoded_cert))

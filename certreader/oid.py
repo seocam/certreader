@@ -1,16 +1,21 @@
 
 import yaml
 
+import pkg_resources
+
+
 class OID:
     def __init__(self):
-        with open("data/oid.yml") as lib_f:
-                self.oid_map = yaml.load(lib_f.read(), Loader=yaml.FullLoader)
+        oid_yaml = pkg_resources.resource_string(__name__, "data/oid.yml")
+        self.oid_map = yaml.load(oid_yaml, Loader=yaml.FullLoader)
 
     def get_nameform(self, oid):
         return self.oid_map.get(oid)
 
+
 # Use a singleton to read oid yaml just once
 _oid = OID()
+
 
 def get_nameform(oid):
     return _oid.get_nameform(oid)
